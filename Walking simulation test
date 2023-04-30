@@ -1,0 +1,38 @@
+// Set initial position
+let position = {
+  x: 0,
+  y: 0
+};
+// Define walking directions
+const DIRECTIONS = {
+  UP: 'up',
+  DOWN: 'down',
+  LEFT: 'left',
+  RIGHT: 'right'
+};
+// Function to move in a specific direction
+function walk(direction) {
+  switch (direction) {
+    case DIRECTIONS.UP:
+      position.y++;
+      break;
+    case DIRECTIONS.DOWN:
+      position.y--;
+      break;
+    case DIRECTIONS.LEFT:
+      position.x--;
+      break;
+    case DIRECTIONS.RIGHT:
+      position.x++;
+      break;
+    default:
+      console.log('Invalid direction!');
+      break;
+  }
+}
+// Test the walking function
+console.log('Initial position:', position);
+walk(DIRECTIONS.UP);
+walk(DIRECTIONS.RIGHT);
+walk(DIRECTIONS.DOWN);
+console.log('Final position:', position);
